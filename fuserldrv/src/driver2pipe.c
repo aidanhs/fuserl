@@ -207,7 +207,7 @@ driver_select (ErlDrvPort       port,
 int 
 driver_output (ErlDrvPort       port,
                char*            buf,
-               int              len)
+               ErlDrvSizeT      len)
 {
   (void) port;
 

@@ -1451,7 +1451,7 @@ from_emulator_destruct (FromEmulatorLL from_emulator)
 static void
 fuserl_output           (ErlDrvData     handle,
                          char*          buf,
-                         int            buflen)
+                         ErlDrvSizeT    buflen)
 {
   DriverDataLL* d = (DriverDataLL*) handle;
   FromEmulatorLL from_emulator = decode_from (buf, buflen);
