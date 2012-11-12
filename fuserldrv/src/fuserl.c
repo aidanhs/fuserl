@@ -1531,7 +1531,11 @@ fuserl_ready_input      (ErlDrvData     handle,
     {
       char byte;
 
-      (void) write (d->filedes[0], &byte, 1);
+              /* XXX: Compiler hangs on warnings,
+               *       including not dealing with a return value. (Is there a better way to temporarily disable -Werror=unused-result ?)
+               */
+      if(write (d->filedes[0], &byte, 1)){
+      }
     }
 
   fuserl_debug ("fuserl_ready_input complete\n");

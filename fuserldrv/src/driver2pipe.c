@@ -320,7 +320,11 @@ driver_to_pipe_main (char*              command,
             {
               const char msg[] = "driver2pipe: bad poll\n";
 
-              write (2, msg, sizeof (msg));
+              /* XXX: Compiler hangs on warnings,
+               *       including not dealing with a return value. (Is there a better way to temporarily disable -Werror=unused-result ?)
+               */
+              if(write (2, msg, sizeof (msg))){
+              }
 
               goto STOP;
             }
