@@ -19,14 +19,23 @@ Version 2.0.1:
 Version 2.0.0:
   * Include fuse context in callbacks.
 
+Version 1.0.2:
+  * Freebsd7 fixes.
+
 Version 1.0.1:
-  * Fix 'make dist'
+  * Fix 'make dist'.
+  * MacFuse tweaks.
 
 Version 1.0.0:
-  * Switch to low-level interface (fuserldrv 1.0.0).
+  * Switch to low-level interface (fuserldrv 1.0.0, eliminates threads).
+
+Version 0.0.2:
+  * Fixed pthread_cond_wait problem (mutex was not locked).
+  * Freebsd7 fixes (realpath/getattr deadlock).
 
 Version 0.0.1:
-  * Darwin test fixes (wait for mount).
+  * Darwin test/portability fixes (wait for mount).
+  * 32 bit portability fixes.
 
 Version 0.0.0:
   * Initial version.
