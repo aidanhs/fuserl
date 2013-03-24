@@ -49,5 +49,3 @@ FW_ERL_APP_ENVIRONMENT="[ { fuserldrvprefix, auto_detect } ]"
 # FW_ERL_APP_EXTRA=""
 
 FW_DUPLOAD_ARGS=${FW_DUPLOAD_ARGS-"-t dukeshardy"}
-
-FW_SUBVERSION_TAG_ROOT="https://fuserl.googlecode.com/svn/tags/fuserl"
